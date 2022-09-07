@@ -10,3 +10,15 @@ const messageConfig = {
       "Loki"
   ]
 };
+
+function printCard () {
+  console.log(this.frontContent);
+  console.log(this.insideContent);
+
+this.signatories.forEach((signatory) => 
+  console.log(`${this.closing[signatory]}, ${signatory}`)
+  
+);
+};
+printCard.call(messageConfig);
+ 
